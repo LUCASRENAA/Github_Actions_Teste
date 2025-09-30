@@ -2,10 +2,22 @@ name: Build Simples
 
 on: [push]
 
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # garante histórico completo
+
       - name: Hello World
-        run: echo "O workflow foi executado!"
+        run: echo "O workflow foi executado no repositório LUCASRENAA/Github_Actions_Example"
+
+      - name: TruffleHog OSS
+        uses: trufflesecurity/trufflehog@v3.90.8
+        with:
+          scanArguments: --path . 
+
+
