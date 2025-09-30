@@ -21,3 +21,5 @@ jobs:
         uses: trufflesecurity/trufflehog@v3.90.8
         with:
           scanArguments: --path . 
+
+
