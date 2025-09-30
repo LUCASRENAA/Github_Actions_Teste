@@ -1,9 +1,7 @@
 name: Build Simples
 
-on:
-  push:
-    branches:
-      - main  # ou a branch que você usar
+on: [push]
+
 
 jobs:
   build:
