@@ -7,5 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      
       - name: Hello World
         run: echo "O workflow foi executado!"
+
+      - name: TruffleHog OSS
+        uses: trufflesecurity/trufflehog@v3.90.8
